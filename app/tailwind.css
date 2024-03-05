@@ -3,16 +3,33 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-3xl font-bold;
+  @font-face {
+    font-family: "Pentron";
+    src: url("/fonts/Prenton.otf") format("truetype");
+    font-display: swap;
   }
-  h2 {
-    @apply text-2xl font-bold;
+  /*
+  @font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/open-sans.ttf") format("truetype");
+    font-display: swap;
+  } */
+}
+
+@layer utilities {
+  .text-shadow-2 {
+    text-shadow: 2px 2px theme("colors.purple.400");
   }
-  h3 {
-    @apply text-xl font-bold;
+  .text-shadow-3 {
+    text-shadow: 3px 3px theme("colors.purple.400");
   }
-  h4 {
-    @apply text-lg font-bold;
-  }
+}
+
+span[data-line] {
+  padding-inline: 1.5rem;
+}
+
+span[data-highlighted-line] {
+  background-color: #c792ea66;
+  border-left: 4px solid #c792ea;
 }

@@ -21,7 +21,9 @@ export default function Edge() {
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1 className="text-red-500 text-2xl">Can you defer on the edge?</h1>
+      <h1 className="text-red-500 text-2xl font-prenton">
+        Can you defer on the edge?
+      </h1>
       <Suspense fallback="Loading...">
         <Await resolve={message}>{(message) => <p>{message}</p>}</Await>
       </Suspense>
