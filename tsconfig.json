@@ -1,6 +1,5 @@
 {
   "include": [
-    "remix.env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
@@ -9,6 +8,11 @@
       "DOM",
       "DOM.Iterable",
       "ES2022"
+    ],
+    "types": [
+      "@remix-run/dev",
+      "@vercel/remix",
+      "vite/client"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
