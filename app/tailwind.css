@@ -33,3 +33,8 @@ span[data-highlighted-line] {
   background-color: #c792ea66;
   border-left: 4px solid #c792ea;
 }
+
+.hljs {
+  color: #abb2bf;
+  background: #282c34;
+}

@@ -8,17 +8,26 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypeHighlight from "rehype-highlight";
 import remarkToc from "remark-toc";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 installGlobals();
 
 export default defineConfig({
   plugins: [
     mdx({
-      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkToc],
-      rehypePlugins: [
-        rehypeHighlight({
-          detect: true,
+      rehypePlugins: [rehypeHighlight({}), rehypePrettyCode],
+      remarkPlugins: [
+        remarkFrontmatter,
+        remarkMdxFrontmatter,
+        remarkToc({
+          heading: "Contents",
+          tight: true,
+          maxDepth: 2,
         }),
+        rehypeSlug,
+        rehypeAutolinkHeadings,
       ],
     }),
     remix({ presets: [vercelPreset()] }),
