@@ -1,1 +1,3 @@
 # TechProvider
+
+montserrat, prenton, consolas
