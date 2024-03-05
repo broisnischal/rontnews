@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import tailwind from "./tailwind.css?url";
+import { cssBundleHref } from "@remix-run/css-bundle";
 import { type LinksFunction } from "@vercel/remix";
 
 export const links: LinksFunction = () => {
@@ -14,6 +15,7 @@ export const links: LinksFunction = () => {
       rel: "stylesheet",
       href: tailwind,
     },
+    ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   ];
 };
 
