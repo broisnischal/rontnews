@@ -1,5 +1,6 @@
 {
   "include": [
+    "remix.env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
@@ -8,11 +9,6 @@
       "DOM",
       "DOM.Iterable",
       "ES2022"
-    ],
-    "types": [
-      "@remix-run/dev",
-      "@vercel/remix",
-      "vite/client"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -29,7 +25,6 @@
         "./app/*"
       ]
     },
-    // Remix takes care of building everything in `remix build`.
     "noEmit": true
   }
 }
