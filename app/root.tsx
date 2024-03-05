@@ -1,4 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
+import tailwind from "~/tailwind.css";
+
 import {
   Links,
   LiveReload,
@@ -11,6 +13,10 @@ import { Analytics } from "@vercel/analytics/react";
 import type { LinksFunction } from "@vercel/remix";
 
 export const links: LinksFunction = () => [
+  {
+    rel: "stylesheet",
+    href: tailwind,
+  },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 

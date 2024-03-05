@@ -26,7 +26,9 @@ export default function Edge() {
         <Await resolve={message}>{(message) => <p>{message}</p>}</Await>
       </Suspense>
       <br />
-      <Link to="/">Home</Link>
+      <Link to="/" className="text-4xl">
+        Home
+      </Link>
     </div>
   );
 }
