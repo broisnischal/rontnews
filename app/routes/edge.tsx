@@ -1,6 +1,7 @@
 import { Await, Link, useLoaderData } from "@remix-run/react";
 import { defer, type MetaFunction } from "@vercel/remix";
 import { Suspense } from "react";
+import MyAssets from "~/assetize.gen";
 
 export const config = { runtime: "edge" };
 
@@ -28,6 +29,8 @@ export default function Edge() {
         <Await resolve={message}>{(message) => <p>{message}</p>}</Await>
       </Suspense>
       <br />
+      <img src={MyAssets.icons.youtube.path} width={200} height={50} alt="" />
+
       <Link to="/">Home</Link>
     </div>
   );

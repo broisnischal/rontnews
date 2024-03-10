@@ -1,6 +1,7 @@
 import { Await, Link, defer, useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@vercel/remix";
 import { Suspense } from "react";
+import MyAssets from "~/assetize.gen";
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,6 +30,7 @@ export default function Index() {
       <Suspense fallback="Loading...">
         <Await resolve={message2}>{(message2) => <p>{message2}</p>}</Await>
       </Suspense>
+      <img src={MyAssets.images.profile.path} width={50} height={50} alt="" />
       <br />
       <Link to="/edge">Take it to the edge</Link>
     </div>
