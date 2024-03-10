@@ -29,7 +29,12 @@ export default function Edge() {
         <Await resolve={message}>{(message) => <p>{message}</p>}</Await>
       </Suspense>
       <br />
-      <img src={MyAssets.icons.youtube.path} width={200} height={50} alt="" />
+      <img
+        src={MyAssets.Icons.YoutubeThumbnail.path}
+        width={200}
+        height={50}
+        alt=""
+      />
 
       <Link to="/">Home</Link>
     </div>

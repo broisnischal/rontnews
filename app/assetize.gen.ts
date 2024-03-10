@@ -38,10 +38,10 @@ class AssetRootGen {
   private static instance: AssetRootGen;
 
   // favicon - path : public/favicon.ico
-  static readonly favicon: AssetItem = new AssetItem("/favicon.ico");
+  static readonly Favicon: AssetItem = new AssetItem("/favicon.ico");
 
-  static get assets() {
-    return [this.favicon];
+  static get Assets() {
+    return [this.Favicon];
   }
 }
 class AssetsIconsGen {
@@ -49,11 +49,13 @@ class AssetsIconsGen {
 
   private static instance: AssetsIconsGen;
 
-  // youtube - path : public/icons/youtube.png
-  static readonly youtube: AssetItem = new AssetItem("/icons/youtube.png");
+  // youtube thumbnail - path : public/icons/youtube thumbnail.png
+  static readonly YoutubeThumbnail: AssetItem = new AssetItem(
+    "/icons/youtube thumbnail.png",
+  );
 
-  static get icons() {
-    return [this.youtube];
+  static get Icons() {
+    return [this.YoutubeThumbnail];
   }
 }
 class AssetsImagesGen {
@@ -66,10 +68,10 @@ class AssetsImagesGen {
     "/images/Screenshot.png",
   );
   // profile - path : public/images/profile.png
-  static readonly profile: AssetItem = new AssetItem("/images/profile.png");
+  static readonly Profile: AssetItem = new AssetItem("/images/profile.png");
 
-  static get images() {
-    return [this.Screenshot, this.profile];
+  static get Images() {
+    return [this.Screenshot, this.Profile];
   }
 }
 class AssetsFontsGen {
@@ -86,17 +88,17 @@ class AssetsFontsGen {
     "/fonts/PrentonItalic.otf",
   );
   // consolaz - path : public/fonts/consolaz.ttf
-  static readonly consolaz: AssetItem = new AssetItem("/fonts/consolaz.ttf");
+  static readonly Consolaz: AssetItem = new AssetItem("/fonts/consolaz.ttf");
   // nothing - path : public/fonts/nothing.ttf
-  static readonly nothing: AssetItem = new AssetItem("/fonts/nothing.ttf");
+  static readonly Nothing: AssetItem = new AssetItem("/fonts/nothing.ttf");
 
-  static get fonts() {
+  static get Fonts() {
     return [
       this.Consolas,
       this.Prenton,
       this.PrentonItalic,
-      this.consolaz,
-      this.nothing,
+      this.Consolaz,
+      this.Nothing,
     ];
   }
 }
@@ -106,10 +108,10 @@ class MyAssets {
 
   // private static instance: MyAssets;
 
-  static readonly root = AssetRootGen;
-  static readonly icons = AssetsIconsGen;
-  static readonly images = AssetsImagesGen;
-  static readonly fonts = AssetsFontsGen;
+  static readonly Root = AssetRootGen;
+  static readonly Icons = AssetsIconsGen;
+  static readonly Images = AssetsImagesGen;
+  static readonly Fonts = AssetsFontsGen;
 }
 
 export default MyAssets;

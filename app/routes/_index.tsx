@@ -30,7 +30,7 @@ export default function Index() {
       <Suspense fallback="Loading...">
         <Await resolve={message2}>{(message2) => <p>{message2}</p>}</Await>
       </Suspense>
-      <img src={MyAssets.images.profile.path} width={50} height={50} alt="" />
+      <img src={MyAssets.Images.Profile.path} width={50} height={50} alt="" />
       <br />
       <Link to="/edge">Take it to the edge</Link>
     </div>
